@@ -1,0 +1,726 @@
+1:
+  month: January
+  day: 1
+  ot: Gen 1-2
+  nt: Matt 1
+  pt: Ps 1
+2:
+  month: January
+  day: 2
+  ot: Gen 3-4
+  nt: Matt 2
+  pt: Ps 2
+3:
+  month: January
+  day: 3
+  ot: Gen 5-6
+  nt: Matt 3
+  pt: Ps 3
+4:
+  month: January
+  day: 5
+  ot: Gen 7-8
+  nt: Matt 4
+  pt: Ps 4
+5:
+  month: January
+  day: 5
+  ot: Gen 9-10
+  nt: Matt 5
+  pt: Ps 5
+6:
+  month: January
+  day: 6
+  ot: Gen 11-12
+  nt: Matt 6
+  pt: Ps 6
+7:
+  month: January
+  day: 7
+  ot: Gen 13-14
+  nt: Matt 7
+  pt: Ps 7
+8:
+  month: January
+  day: 8
+  ot: Gen 15-16
+  nt: Matt 8
+  pt: Ps 8
+9:
+  month: January
+  day: 9
+  ot: Gen 17-18
+  nt: Matt 9
+  pt: Ps 9
+10:
+  month: January
+  day: 10
+  ot: Gen 19-20
+  nt: Matt 10
+  pt: Ps 10
+11:
+  month: January
+  day: 11
+  ot: Gen 21-22
+  nt: Matt 11
+  pt: Ps 11
+12:
+  month: January
+  day: 12
+  ot: Gen 23-24
+  nt: Matt 12
+  pt: Ps 12
+13:
+  month: January
+  day: 13
+  ot: Gen 25-26
+  nt: Matt 13
+  pt: Ps 13
+14:
+  month: January
+  day: 14
+  ot: Gen 27-28
+  nt: Matt 14
+  pt: Ps 14
+15:
+  month: January
+  day: 15
+  ot: Gen 29-30
+  nt: Matt 15
+  pt: Ps 15
+16:
+  month: January
+  day: 16
+  ot: Gen 31-32
+  nt: Matt 16
+  pt: Ps 16
+17:
+  month: January
+  day: 17
+  ot: Gen 33-34
+  nt: Matt 17
+  pt: Ps 17
+18:
+  month: January
+  day: 18
+  ot: Gen 35-36
+  nt: Matt 18
+  pt: Ps 18
+19:
+  month: January
+  day: 19
+  ot: Gen 37-38
+  nt: Matt 19
+  pt: Ps 19
+20:
+  month: January
+  day: 20
+  ot: Gen 39-40
+  nt: Matt 20
+  pt: Ps 20
+21:
+  month: January
+  day: 21
+  ot: Gen 41-42
+  nt: Matt 21
+  pt: Ps 21
+22:
+  month: January
+  day: 21
+  ot: Gen 43-44
+  nt: Matt 22
+  pt: Ps 22
+23:
+  month: January
+  day: 23
+  ot: Gen 45-46
+  nt: Matt 23
+  pt: Ps 23
+24:
+  month: January
+  day: 24
+  ot: Gen 47-48
+  nt: Matt 24
+  pt: Ps 24
+25:
+  month: January
+  day: 25
+  ot: Gen 49-50
+  nt: Matt 25
+  pt: Ps 25
+26:
+  month: January
+  day: 26
+  ot: Ex 1-2
+  nt: Matt 26
+  pt: Ps 26
+27:
+  month: January
+  day: 27
+  ot: Ex 3-4
+  nt: Matt 27
+  pt: Ps 27
+28:
+  month: January
+  day: 28
+  ot: Ex 5-6
+  nt: Matt 28
+  pt: Ps 28
+29:
+  month: January
+  day: 29
+  ot: Ex 7-8
+  nt: Acts 1
+  pt: Ps 29
+30:
+  month: January
+  day: 30
+  ot: Ex 9-10
+  nt: Acts 2
+  pt: Ps 30
+31:
+  month: January
+  day: 31
+  ot: Ex 11-12
+  nt: Acts 3
+  pt: Ps 31
+32:
+  month: February
+  day: 1
+  ot: Ex 13-14
+  nt: Acts 4
+  pt: Ps 32
+33:
+  month: February
+  day: 2
+  ot: Ex 15-16
+  nt: Acts 5
+  pt: Ps 33
+34:
+  month: February
+  day: 3
+  ot: Ex 17-18
+  nt: Acts 6
+  pt: Ps 34
+35:
+  month: February
+  day: 4
+  ot: Ex 19-20
+  nt: Acts 7
+  pt: Ps 35
+36:
+  month: February
+  day: 5
+  ot: Ex 21-22
+  nt: Acts 8
+  pt: Ps 36
+37:
+  month: February
+  day: 6
+  ot: Ex 23-24
+  nt: Acts 9
+  pt: Ps 37
+38:
+  month: February
+  day: 7
+  ot: Ex 25-26
+  nt: Acts 10
+  pt: Ps 38
+39:
+  month: February
+  day: 8
+  ot: Ex 27-28
+  nt: Acts 11
+  pt: Ps 39
+40:
+  month: February
+  day: 9
+  ot: Ex 29-30
+  nt: Acts 12
+  pt: Ps 40
+41:
+  month: February
+  day: 10
+  ot: Ex 31-32
+  nt: Acts 13
+  pt: Ps 41
+42:
+  month: February
+  day: 11
+  ot: Ex 33-34
+  nt: Acts 14
+  pt: Ps 42
+43:
+  month: February
+  day: 12
+  ot: Ex 35-36
+  nt: Acts 15
+  pt: Ps 43
+44:
+  month: February
+  day: 13
+  ot: Ex 37-38
+  nt: Acts 16
+  pt: Ps 44
+45:
+  month: February
+  day: 14
+  ot: Ex 39-40
+  nt: Acts 17
+  pt: Ps 45
+46:
+  month: February
+  day: 15
+  ot: Lev 1-3
+  nt: Acts 18
+  pt: Ps 46
+47:
+  month: February
+  day: 16
+  ot: Lev 4-5
+  nt: Acts 19
+  pt: Ps 47
+48:
+  month: February
+  day: 17
+  ot: Lev 6-7
+  nt: Acts 20
+  pt: Ps 48
+49:
+  month: February
+  day: 18
+  ot: Lev 8-9
+  nt: Acts 21
+  pt: Ps 49
+50:
+  month: February
+  day: 19
+  ot: Lev 10-11
+  nt: Acts 22
+  pt: Ps 50
+51:
+  month: February
+  day: 20
+  ot: Lev 12-13
+  nt: Acts 23
+  pt: Ps 51
+52:
+  month: February
+  day: 21
+  ot: Lev 14-15
+  nt: Acts 24
+  pt: Ps 52
+53:
+  month: February
+  day: 22
+  ot: Lev 16-17
+  nt: Acts 25
+  pt: Ps 53
+54:
+  month: February
+  day: 23
+  ot: Lev 18-19
+  nt: Acts 26
+  pt: Ps 54
+55:
+  month: February
+  day: 24
+  ot: Lev 20-21
+  nt: Acts 27
+  pt: Ps 55
+56:
+  month: February
+  day: 25
+  ot: Lev 22-23
+  nt: Acts 28
+  pt: Ps 56
+57:
+  month: February
+  day: 26
+  ot: Lev 24-25
+  nt: Mark 1
+  pt: Ps 57
+58:
+  month: February
+  day: 27
+  ot: Lev 26-27
+  nt: Mark 2
+  pt: Ps 58
+59:
+  month: February
+  day: 28
+  ot: Num 1-2
+  nt: Mark 3
+  pt: Ps 59
+60:
+  month: March
+  day: 1
+  ot: Num 3-4
+  nt: Mark 4
+  pt: Ps 60
+61:
+  month: March
+  day: 2
+  ot: Num 5-6
+  nt: Mark 5
+  pt: Ps 61
+62:
+  month: March
+  day: 3
+  ot: Num 7-8
+  nt: Mark 6
+  pt: Ps 62
+63:
+  month: March
+  day: 4
+  ot: Num 9-10
+  nt: Mark 7
+  pt: Ps 63
+64:
+  month: March
+  day: 5
+  ot: Num 11-12
+  nt: Mark 8
+  pt: Ps 64
+65:
+  month: March
+  day: 6
+  ot: Num 13-14
+  nt: Mark 9
+  pt: Ps 65
+66:
+  month: March
+  day: 7
+  ot: Num 15-16
+  nt: Mark 10
+  pt: Ps 66
+67:
+  month: March
+  day: 8
+  ot: Num 17-18
+  nt: Mark 11
+  pt: Ps 67
+68:
+  month: March
+  day: 9
+  ot: Num 19-20
+  nt: Mark 12
+  pt: Ps 68
+69:
+  month: March
+  day: 10
+  ot: Num 21-22
+  nt: Mark 13
+  pt: Ps 69
+70:
+  month: March
+  day: 11
+  ot: Num 23-24
+  nt: Mark 14
+  pt: Ps 70
+71:
+  month: March
+  day: 12
+  ot: Num 25-26
+  nt: Mark 15
+  pt: Ps 71
+72:
+  month: March
+  day: 13
+  ot: Num 27-28
+  nt: Mark 16
+  pt: Ps 72
+73:
+  month: March
+  day: 14
+  ot: Num 29-30
+  nt: Romans 1
+  pt: Ps 73
+74:
+  month: March
+  day: 15
+  ot: Num 31-32
+  nt: Romans 2
+  pt: Ps 74
+75:
+  month: March
+  day: 16
+  ot: Num 33-34
+  nt: Romans 3
+  pt: Ps 75
+76:
+  month: March
+  day: 17
+  ot: Num 35-36
+  nt: Romans 4
+  pt: Ps 76
+77:
+  month: March
+  day: 18
+  ot: Deut 1-2
+  nt: Romans 5
+  pt: Ps 77
+78:
+  month: March
+  day: 19
+  ot: Deut 3-4
+  nt: Romans 6
+  pt: Ps 78
+79:
+  month: March
+  day: 20
+  ot: Deut 5-6
+  nt: Romans 7
+  pt: Ps 79
+80:
+  month: March
+  day: 21
+  ot: Deut 7-8
+  nt: Romans 8
+  pt: Ps 80
+81:
+  month: March
+  day: 22
+  ot: Deut 9-10
+  nt: Romans 9
+  pt: Ps 81
+82:
+  month: March
+  day: 23
+  ot: Deut 11-12
+  nt: Romans 10
+  pt: Ps 82
+83:
+  month: March
+  day: 24
+  ot: Deut 13-14
+  nt: Romans 11
+  pt: Ps 83
+84:
+  month: March
+  day: 25
+  ot: Deut 15-16
+  nt: Romans 12
+  pt: Ps 84
+85:
+  month: March
+  day: 26
+  ot: Deut 17-18
+  nt: Romans 13
+  pt: Ps 85
+86:
+  month: March
+  day: 27
+  ot: Deut 19-20
+  nt: Romans 14
+  pt: Ps 86
+87:
+  month: March
+  day: 28
+  ot: Deut 21-22
+  nt: Romans 15
+  pt: Ps 87
+88:
+  month: March
+  day: 29
+  ot: Deut 23-24
+  nt: Romans 16
+  pt: Ps 88
+89:
+  month: March
+  day: 30
+  ot: Deut 25
+  nt: Luke 1
+  pt: Ps 89
+90:
+  month: March
+  day: 31
+  ot: Deut 26-27
+  nt: Luke 2
+  pt: Ps 90
+91:
+  month: April
+  day: 1
+  ot: Deut 28
+  nt: Luke 3
+  pt: Ps 91
+92:
+  month: April
+  day: 2
+  ot: Deut 29-30
+  nt: Luke 4
+  pt: Ps 92
+93:
+  month: April
+  day: 3
+  ot: Deut 31-32
+  nt: Luke 5
+  pt: Ps 93
+94:
+  month: April
+  day: 4
+  ot: Deut 33-34
+  nt: Luke 6
+  pt: Ps 94
+95:
+  month: April
+  day: 5
+  ot: Joshua 1-2
+  nt: Luke 7
+  pt: Ps 95
+96:
+  month: April
+  day: 6
+  ot: Joshua 3-4
+  nt: Luke 8
+  pt: Ps 96
+97:
+  month: April
+  day: 7
+  ot: Joshua 5-6
+  nt: Luke 9
+  pt: Ps 97
+98:
+  month: April
+  day: 8
+  ot: Joshua 7-8
+  nt: Luke 10
+  pt: Ps 98
+99:
+  month: April
+  day: 9
+  ot: Joshua 9-10
+  nt: Luke 11
+  pt: Ps 99
+100:
+  month: April
+  day: 10
+  ot: Joshua 11-12
+  nt: Luke 12
+  pt: Ps 100
+101:
+  month: April
+  day: 11
+  ot: Joshua 13-14
+  nt: Luke 13
+  pt: Ps 101
+102:
+  month: April
+  day: 12
+  ot: Joshua 15-16
+  nt: Luke 14
+  pt: Ps 102
+103:
+  month: April
+  day: 13
+  ot: Joshua 17-18
+  nt: Luke 15
+  pt: Ps 103
+104:
+  month: April
+  day: 14
+  ot: Joshua 19-20
+  nt: Luke 16
+  pt: Ps 104
+105:
+  month: April
+  day: 15
+  ot: Joshua 21-22
+  nt: Luke 17
+  pt: Ps 105
+106:
+  month: April
+  day: 16
+  ot: Joshua 23-24
+  nt: Luke 18
+  pt: Ps 106
+107:
+  month: April
+  day: 17
+  ot: Judges 1-2
+  nt: Luke 19
+  pt: Ps 107
+108:
+  month: April
+  day: 18
+  ot: Judges 3-4
+  nt: Luke 20
+  pt: Ps 108
+109:
+  month: April
+  day: 19
+  ot: Judges 5-6
+  nt: Luke 21
+  pt: Ps 109
+110:
+  month: April
+  day: 20
+  ot: Judges 7-8
+  nt: Luke 22
+  pt: Ps 110
+111:
+  month: April
+  day: 21
+  ot: Judges 9-10
+  nt: Luke 23
+  pt: Ps 111
+112:
+  month: April
+  day: 22
+  ot: Judges 11-12
+  nt: Luke 24
+  pt: Ps 112
+113:
+  month: April
+  day: 23
+  ot: Judges 13-14
+  nt: 1Cor 1
+  pt: Ps 113
+114:
+  month: April
+  day: 24
+  ot: Judges 15-17
+  nt: 1Cor 2
+  pt: Ps 114
+115:
+  month: April
+  day: 25
+  ot: Judges 18-19
+  nt: 1Cor 3
+  pt: Ps 115
+116:
+  month: April
+  day: 26
+  ot: Judges 20-21
+  nt: 1Cor 4
+  pt: Ps 116
+117:
+  month: April
+  day: 27
+  ot: Ruth 1-2
+  nt: 1Cor 5
+  pt: Ps 117
+118:
+  month: April
+  day: 28
+  ot: Ruth 3-4
+  nt: 1Cor 6
+  pt: Ps 118
+119:
+  month: April
+  day: 29
+  ot: 1Sam 1-2
+  nt: 1Cor 7
+  pt: Ps 119
+120:
+  month: April
+  day: 30
+  ot: 1Sam 3-4
+  nt: 1Cor 8
+  pt: Ps 119
+121:
+  month: May
+  day: 1
+  ot: 1Sam 5-7
+  nt: 1Cor 9
+  pt: Ps 120

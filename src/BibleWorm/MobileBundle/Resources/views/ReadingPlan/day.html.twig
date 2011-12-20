@@ -1,0 +1,25 @@
+{% extends 'BibleWormMobileBundle:ReadingPlan:index.html.twig' %}
+
+{% block header %}
+    <a href="{{ url('BibleWormMobileBundle_getReadingPlan') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Back to Plan</a>
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox_1" id="checkbox_1" class="custom" />
+            <label for="checkbox_1">{{ readings.ot }}</label>
+            <input type="checkbox" name="checkbox_2" id="checkbox_2" class="custom" />
+            <label for="checkbox_2">{{ readings.nt }}</label>
+            <input type="checkbox" name="checkbox_3" id="checkbox_3" class="custom" />
+            <label for="checkbox_3">{{ readings.pt }}</label>
+        </fieldset>
+    </div>
+    <div data-role="navbar">
+        <ul>
+            <li data-iconpos="left"><a href="{{ url('BibleWormMobileBundle_getReadingPlanDay', { 'day': day - 1 }) }}" data-icon="arrow-l" data-direction="reverse">Prev</a></li>
+            <li data-iconpos="right"><a href="{{ url('BibleWormMobileBundle_getReadingPlanDay', { 'day': day + 1 }) }}" data-icon="arrow-r">Next</a></li>
+        </ul>
+    </div>
+{% endblock %}

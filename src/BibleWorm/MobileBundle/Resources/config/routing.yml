@@ -1,0 +1,21 @@
+BibleWormMobileBundle_homepage:
+    pattern:  /
+    defaults: { _controller: BibleWormMobileBundle:Default:index }
+
+BibleWormMobileBundle_getReadingPlan:
+    pattern:  /reading-plan
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: html }
+    requirements:
+        _method: GET
+        
+BibleWormMobileBundle_getReadingPlanDay:
+    pattern:  /reading-plan/{day}
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlanDay, _format: html }
+    requirements:
+        _method: GET
+
+BibleWormMobileBundle_api_getReadingPlan:
+    pattern:  /api/v1/reading-plan
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: json }
+    requirements:
+        _method: GET

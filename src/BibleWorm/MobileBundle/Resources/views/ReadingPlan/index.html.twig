@@ -1,0 +1,37 @@
+{% extends 'BibleWormMobileBundle:Default:layout.html.twig' %}
+
+{% block title %}Reading Plan{% endblock %}
+
+{% block header %}
+<h1>Reading Plan</h1>
+<a href="#" data-role="button" data-icon="gear" class="ui-btn-right">Options</a>
+{% endblock %}
+
+{% block bodyXXX %}
+    <ul data-role="listview" data-theme="a">
+        {% for day, readings in readingPlan %}
+            <li><a href="{{ url('BibleWormMobileBundle_getReadingPlanDay', { 'day': day }) }}">Day {{ day }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <div data-role="collapsible-set">
+        {% for day, readings in readingPlan %}
+            <div data-role="collapsible">
+                <h3>Day {{ day }}</h3>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        {% set id = 'checkbox_' + day %}
+                        <input type="checkbox" name="{{id}}_1" id="{{id}}_1" class="custom" />
+                        <label for="{{id}}_1">{{ readings.ot }}</label>
+                        <input type="checkbox" name="checkbox_2" id="{{id}}_2" class="custom" />
+                        <label for="{{id}}_2">{{ readings.nt }}</label>
+                        <input type="checkbox" name="{{id}}_3" id="{{id}}_3" class="custom" />
+                        <label for="{{id}}_3">{{ readings.pt }}</label>
+                    </fieldset>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

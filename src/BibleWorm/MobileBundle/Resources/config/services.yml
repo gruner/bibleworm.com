@@ -1,0 +1,7 @@
+parameters:
+#    bible_worm_mobile.example.class: BibleWorm\MobileBundle\Example
+
+services:
+#    bible_worm_mobile.example:
+#        class: %bible_worm_mobile.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
