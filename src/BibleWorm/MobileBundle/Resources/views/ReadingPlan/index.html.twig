@@ -22,7 +22,7 @@
                 <h3>Day {{ day }}</h3>
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
-                        {% set id = 'checkbox_' + day %}
+                        {% set id = 'checkbox_#{day}' %}
                         <input type="checkbox" name="{{id}}_1" id="{{id}}_1" class="custom" />
                         <label for="{{id}}_1">{{ readings.ot }}</label>
                         <input type="checkbox" name="checkbox_2" id="{{id}}_2" class="custom" />
