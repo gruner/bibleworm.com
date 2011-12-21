@@ -28,4 +28,16 @@ class ReadingPlanController extends Controller
             'readings' => $readingPlan[$day]
         ));
     }
+    
+    public function getPassageAction($book, $chapter, $verse)
+    {
+        $bible = $this->get('bw.api.bible');
+        
+        $passage = $bible->get($reference);
+        
+        return $this->render('BibleWormMobileBundle:ReadingPlan:passage.html.twig', array(
+            'reference' => $ref,
+            'passage' => $passage
+        ));
+    }
 }

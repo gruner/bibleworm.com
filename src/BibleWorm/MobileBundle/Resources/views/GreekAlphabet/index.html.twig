@@ -6,6 +6,21 @@
 <script src="/bundles/biblewormmobile/js/greek_alphabet.js"></script>
 {% endblock %}
 
+{% block styles %}
+<style>
+    #flash_card_question {
+        font-family: Times;
+        font-size: 7em;
+        font-weight: normal;
+        text-align: center;
+        margin: .25em 0;
+    }
+    #flash_card_answer {
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
 {% block header %}
 <a href="{{ url('bw_mobile_homepage') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Back to Tools</a>
 <h1>Greek Alphabet</h1>

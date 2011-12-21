@@ -9,7 +9,6 @@
 	<!-- <link rel="stylesheet" href="/bundles/biblewormmobile/css/bibleworm.min.css" /> -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-	{% block javascripts %}{% endblock %}
 </head>
 <body>
 
@@ -26,7 +25,9 @@
 	<div data-role="footer">
 		{% block footer %}<h4>BibleWorm</h4>{% endblock %}
 	</div><!-- /footer -->
-
+    
+	{% block styles %}{% endblock %}
+	{% block javascripts %}{% endblock %}
 </div><!-- /page -->
 
 </body>

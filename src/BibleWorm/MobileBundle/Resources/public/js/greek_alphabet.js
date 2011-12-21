@@ -115,3 +115,8 @@ BW.GREEK = (function($, window, document, undefined) {
 this.jQuery(document).ready(function() {
     BW.GREEK.go();
 });
+
+
+// this.jQuery(document).delegate("#flash_card_question", "pagecreate", function() {
+//     BW.GREEK.go();
+// });

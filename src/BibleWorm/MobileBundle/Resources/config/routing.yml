@@ -13,6 +13,12 @@ bw_get_reading_plan_set:
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlanDay, _format: html }
     requirements:
         _method: GET
+        
+bw_get_reading_plan_passage:
+    pattern:  /{book}/{chapter}/{verse}
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage, _format: html, verse: ''}
+    requirements:
+        _method: GET
 
 bw_api_v1_get_reading_plan:
     pattern:  /api/v1/reading-plan
