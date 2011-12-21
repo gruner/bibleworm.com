@@ -1,0 +1,24 @@
+{% extends 'BibleWormMobileBundle:Default:layout.html.twig' %}
+
+{% block title %}Greek Alphabet Flash Cards{% endblock %}
+
+{% block javascripts %}
+<script src="/bundles/biblewormmobile/js/greek_alphabet.js"></script>
+{% endblock %}
+
+{% block header %}
+<a href="{{ url('bw_mobile_homepage') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Back to Tools</a>
+<h1>Greek Alphabet</h1>
+{% endblock %}
+
+{% block body %}
+    <h1 id="flash_card_question">&nbsp;</h1>
+    <h2 id="flash_card_answer">&nbsp;</h2>
+    <a href="#" data-role="button" id="flash_card_answer_btn">Show Letter Name</a>
+    <div data-role="navbar">
+        <ul>
+            <li data-iconpos="left" id="flash_card_prev"><a href="#" data-icon="arrow-l" data-direction="reverse">Prev</a></li>
+            <li data-iconpos="right" id="flash_card_next"><a href="#" data-icon="arrow-r">Next</a></li>
+        </ul>
+    </div>
+{% endblock %}

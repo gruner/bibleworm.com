@@ -1,21 +1,27 @@
-BibleWormMobileBundle_homepage:
-    pattern:  /
+bw_mobile_homepage:
+    pattern:  /m
     defaults: { _controller: BibleWormMobileBundle:Default:index }
 
-BibleWormMobileBundle_getReadingPlan:
+bw_get_reading_plan:
     pattern:  /reading-plan
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: html }
     requirements:
         _method: GET
         
-BibleWormMobileBundle_getReadingPlanDay:
+bw_get_reading_plan_set:
     pattern:  /reading-plan/{day}
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlanDay, _format: html }
     requirements:
         _method: GET
 
-BibleWormMobileBundle_api_getReadingPlan:
+bw_api_v1_get_reading_plan:
     pattern:  /api/v1/reading-plan
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: json }
+    requirements:
+        _method: GET
+
+bw_get_greek_flash_cards:
+    pattern:  /greek-alphabet
+    defaults: { _controller: BibleWormMobileBundle:GreekAlphabet:index, _format: html }
     requirements:
         _method: GET

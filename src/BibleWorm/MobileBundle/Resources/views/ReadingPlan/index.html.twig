@@ -2,15 +2,19 @@
 
 {% block title %}Reading Plan{% endblock %}
 
+{% block javascripts %}
+<script src="/bundles/biblewormmobile/js/readingplan.js"></script>
+{% endblock %}
+
 {% block header %}
 <h1>Reading Plan</h1>
 <a href="#" data-role="button" data-icon="gear" class="ui-btn-right">Options</a>
 {% endblock %}
 
-{% block bodyXXX %}
+{% block bodyOLD %}
     <ul data-role="listview" data-theme="a">
         {% for day, readings in readingPlan %}
-            <li><a href="{{ url('BibleWormMobileBundle_getReadingPlanDay', { 'day': day }) }}">Day {{ day }}</a></li>
+            <li><a href="{{ url('bw_get_reading_plan_set', { 'day': day }) }}">Day {{ day }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %}
@@ -22,7 +26,7 @@
                 <h3>Day {{ day }}</h3>
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
-                        {% set id = 'checkbox_#{day}' %}
+                        {% set id = "checkbox_#{day}" %}
                         <input type="checkbox" name="{{id}}_1" id="{{id}}_1" class="custom" />
                         <label for="{{id}}_1">{{ readings.ot }}</label>
                         <input type="checkbox" name="checkbox_2" id="{{id}}_2" class="custom" />

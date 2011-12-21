@@ -1,7 +1,7 @@
 {% extends 'BibleWormMobileBundle:ReadingPlan:index.html.twig' %}
 
 {% block header %}
-    <a href="{{ url('BibleWormMobileBundle_getReadingPlan') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Back to Plan</a>
+    <a href="{{ url('bw_get_reading_plan') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Back to Plan</a>
     {{ parent() }}
 {% endblock %}
 
@@ -18,8 +18,8 @@
     </div>
     <div data-role="navbar">
         <ul>
-            <li data-iconpos="left"><a href="{{ url('BibleWormMobileBundle_getReadingPlanDay', { 'day': day - 1 }) }}" data-icon="arrow-l" data-direction="reverse">Prev</a></li>
-            <li data-iconpos="right"><a href="{{ url('BibleWormMobileBundle_getReadingPlanDay', { 'day': day + 1 }) }}" data-icon="arrow-r">Next</a></li>
+            <li data-iconpos="left"><a href="{{ url('bw_get_reading_plan_set', { 'day': day - 1 }) }}" data-icon="arrow-l" data-direction="reverse">Prev</a></li>
+            <li data-iconpos="right"><a href="{{ url('bw_get_reading_plan_set', { 'day': day + 1 }) }}" data-icon="arrow-r">Next</a></li>
         </ul>
     </div>
 {% endblock %}

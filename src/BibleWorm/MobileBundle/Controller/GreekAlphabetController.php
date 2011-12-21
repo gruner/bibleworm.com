@@ -5,11 +5,10 @@ namespace BibleWorm\MobileBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class DefaultController extends Controller
+class GreekAlphabetController extends Controller
 {
-    
     public function indexAction()
     {
-        return $this->render('BibleWormMobileBundle:Default:index.html.twig');
+        return $this->render('BibleWormMobileBundle:GreekAlphabet:index.html.twig');
     }
 }

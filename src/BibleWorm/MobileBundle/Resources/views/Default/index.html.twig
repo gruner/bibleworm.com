@@ -1,1 +1,14 @@
-Hello {{ name }}!
+{% extends 'BibleWormMobileBundle:Default:layout.html.twig' %}
+
+{% block title %}Mobile Bible Study Tools{% endblock %}
+
+{% block header %}
+<h1>Bible Study Tools</h1>
+{% endblock %}
+
+{% block body %}
+    <ul data-role="listview" data-theme="a">
+        <li><a href="{{ url('bw_get_reading_plan') }}">Bible Reading Plan</a></li>
+        <li><a href="{{ url('bw_get_greek_flash_cards') }}">Greek Alphabet Flash Cards</a></li>
+    </ul>
+{% endblock %}
