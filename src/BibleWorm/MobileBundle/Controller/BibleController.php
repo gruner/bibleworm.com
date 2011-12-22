@@ -37,7 +37,13 @@ class BibleController extends Controller
         $books = $bible->getBooks();
         
         if (!array_key_exists($book, $books)) {
-            # 404
+            throw $this->createNotFoundException(sprintf('Book "%s" not found', $book));
+        }
+        
+        $bookInfo = $books[$book];
+        
+        if ($chapter > $bookInfo['chapter_count']) {
+            throw $this->createNotFoundException(sprintf('%s does not have a chapter %s', $book, $chapter));
         }
         
         $bookInfo = $books[$book];

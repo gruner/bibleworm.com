@@ -4,6 +4,9 @@ namespace BibleWorm\ApiBundle\Bible;
 
 use BibleWorm\ApiBundle\Bible\BookIndex as Index;
 
+/**
+ * Models the books, chapters, and verse counts of the Bible
+ */
 class Bible
 {
     protected $translations = array();
@@ -32,7 +35,16 @@ class Bible
         }
     }
     
+    public function getTranslations()
+    {
+        return $this->translations;
+    }
     
+    /**
+     * Builds and returns an array of meta data for each book.
+     * It only has to be built a single time because the data
+     * doesn't change
+     */
     public function getBooks()
     {
         if (empty($this->books))
@@ -58,7 +70,9 @@ class Bible
         return $this->books;
     }
     
-    
+    /**
+     * Returns an array of book names
+     */
     public function getBookNames()
     {
         return array_keys($this->getBooks());

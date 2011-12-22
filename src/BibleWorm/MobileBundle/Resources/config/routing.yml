@@ -13,24 +13,22 @@ bw_get_bible_book:
 bw_get_bible_chapter:
     pattern:  /bible/{book}/{chapter}
     defaults: { _controller: BibleWormMobileBundle:Bible:getChapter }
+    requirements:
+        chapter: \d+
 
 bw_get_reading_plan:
     pattern:  /reading-plan
-    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: html }
-    requirements:
-        _method: GET
-        
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan }
+
 bw_get_reading_plan_set:
     pattern:  /reading-plan/{day}
-    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlanDay, _format: html }
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlanDay }
     requirements:
-        _method: GET
-        
+        day: \d+
+
 bw_get_reading_plan_passage:
     pattern:  /read/{reference}
-    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage, _format: html, verse: ''}
-    requirements:
-        _method: GET
+    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage }
         
 # bw_get_reading_plan_passage:
 #     pattern:  /{book}/{chapter}
@@ -46,6 +44,4 @@ bw_get_reading_plan_passage:
 
 bw_get_greek_flash_cards:
     pattern:  /greek-alphabet
-    defaults: { _controller: BibleWormMobileBundle:GreekAlphabet:index, _format: html }
-    requirements:
-        _method: GET
+    defaults: { _controller: BibleWormMobileBundle:GreekAlphabet:index }
