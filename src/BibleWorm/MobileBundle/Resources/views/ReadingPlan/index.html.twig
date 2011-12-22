@@ -19,21 +19,29 @@
     </ul>
 {% endblock %}
 
+{% block formz %}
+<fieldset data-role="controlgroup">
+    {% set id = "checkbox_#{day}" %}
+    <input type="checkbox" name="{{id}}_1" id="{{id}}_1" class="custom" />
+    <label for="{{id}}_1">{{ readings.ot }}</label>
+    <input type="checkbox" name="checkbox_2" id="{{id}}_2" class="custom" />
+    <label for="{{id}}_2">{{ readings.nt }}</label>
+    <input type="checkbox" name="{{id}}_3" id="{{id}}_3" class="custom" />
+    <label for="{{id}}_3">{{ readings.pt }}</label>
+</fieldset>
+{% endblock %}
+
 {% block body %}
     <div data-role="collapsible-set">
         {% for day, readings in readingPlan %}
-            <div data-role="collapsible">
+            <div data-role="collapsible" class="readings_container">
                 <h3>Day {{ day }}</h3>
                 <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup">
-                        {% set id = "checkbox_#{day}" %}
-                        <input type="checkbox" name="{{id}}_1" id="{{id}}_1" class="custom" />
-                        <label for="{{id}}_1">{{ readings.ot }}</label>
-                        <input type="checkbox" name="checkbox_2" id="{{id}}_2" class="custom" />
-                        <label for="{{id}}_2">{{ readings.nt }}</label>
-                        <input type="checkbox" name="{{id}}_3" id="{{id}}_3" class="custom" />
-                        <label for="{{id}}_3">{{ readings.pt }}</label>
-                    </fieldset>
+                    <ul data-role="listview" data-theme="c" data-split-theme="c" data-inset="true" class="readings">
+                        <li class="reading_link" id="{{ day }}-1"><a href="#" class="reference">{{ readings.1 }}</a><a href="#">Read</a></li>
+                        <li class="reading_link" id="{{ day }}-2"><a href="#" class="reference">{{ readings.2 }}</a><a href="#">Read</a></li>
+                        <li class="reading_link" id="{{ day }}-3"><a href="#" class="reference">{{ readings.3 }}</a><a href="#">Read</a></li>
+                    </ul>
                 </div>
             </div>
         {% endfor %}

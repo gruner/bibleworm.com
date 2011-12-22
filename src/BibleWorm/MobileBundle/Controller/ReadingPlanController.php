@@ -15,25 +15,30 @@ class ReadingPlanController extends Controller
         return $this->render('BibleWormMobileBundle:ReadingPlan:index.html.twig', array('readingPlan' => $readingPlan));
     }
     
-    public function getReadingPlanDayAction($day)
-    {
-        $readingPlan = Yaml::parse(__DIR__.'/../Resources/readingplans/victory_bible.yml');
-        
-        if (!array_key_exists($day, $readingPlan)) {
-            # code...
-        }
-        
-        return $this->render('BibleWormMobileBundle:ReadingPlan:day.html.twig', array(
-            'day' => $day,
-            'readings' => $readingPlan[$day]
-        ));
-    }
+    // public function getReadingPlanDayAction($day)
+    // {
+    //     $readingPlan = Yaml::parse(__DIR__.'/../Resources/readingplans/victory_bible.yml');
+    //     
+    //     if (!array_key_exists($day, $readingPlan)) {
+    //         # code...
+    //     }
+    //     
+    //     return $this->render('BibleWormMobileBundle:ReadingPlan:day.html.twig', array(
+    //         'day' => $day,
+    //         'readings' => $readingPlan[$day]
+    //     ));
+    // }
     
     public function getPassageAction($book, $chapter, $verse)
     {
-        $bible = $this->get('bw.api.bible');
+        $ref = $book.' '.$chapter;
         
-        $passage = $bible->get($reference);
+        if (!empty($verse)) {
+            $ref .= ':'.$verse;
+        }
+        
+        $bible = $this->get('bw_api.bible');
+        $passage = $bible->getTranslation('ESV')->lookup($ref);
         
         return $this->render('BibleWormMobileBundle:ReadingPlan:passage.html.twig', array(
             'reference' => $ref,

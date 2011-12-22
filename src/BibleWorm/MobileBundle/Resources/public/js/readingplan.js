@@ -1,5 +1,17 @@
 var BW = window.BW || {};
 BW.READ = (function($, window, document, undefined) {
+    
+    var completedReadings,
+        selectedTheme = 'b',
+        unselectedTheme = 'c';
+    
+    function supportsLocalStorage() {
+        try {
+            return 'localStorage' in window && window['localStorage'] !== null;
+        } catch (e) {
+            return false;
+        }
+    }
 
     // Expose contents of APP.
     return {
@@ -10,38 +22,86 @@ BW.READ = (function($, window, document, undefined) {
             }
         },
         init: {
+            
+            resume: function() {
+                if (!supportsLocalStorage()) { return false; }
+                
+                if (localStorage["bw.read.progress"]) {
+                    completedReadings = localStorage["bw.read.progress"].split(',');
+
+                    // Set the completed state on completed readings
+                    for (var i = completedReadings.length - 1; i >= 0; i--) {
+                        $('#' + completedReadings[i]).attr('data-theme', selectedTheme);
+
+                        // TODO: need to mark entire group as completed
+                    };
+                } else {
+                    completedReadings = Array();
+                }
+                
+                return true;
+            },
+            
             initView: function() {
                 
-                $('.ui-checkbox').live('click', function(e) {
+                $('.reference').live('click', function(e) {
                     
-                    var $reading = $(e.target),
-                        $parent = $reading.parents('.ui-collapsible'),
-                        $siblings = $reading.siblings(),
-                        ref = $reading.find('.ui-btn-text').text();
-
-
-                    // open reading
-
-                    // mark set as read if all siblings are checked
-
-                    // this input isn't checked yet, it gets checked
-                    // as a result of this click, so we count it as checked
-                    var checked = !$reading.find('input').is(':checked');
-
-                    if (checked && $parent.find(':checked').length === 3) {
-                        $parent.find('.ui-btn').attr('data-theme', 'b');
-                        console.log('3');
+                    var $reading = $(e.target).parents('.reading_link'),
+                        $container = $reading.parents('.readings_container'),
+                        $readings = $container.find('.reading_link'),
+                        ref = $reading.find('.reference').text();
+                    
+                    // has selected state
+                    if ($reading.attr('data-theme') == selectedTheme) {
+                        // show unselected state
+                        $reading.attr('data-theme', unselectedTheme);
+                        
+                        // track progress
+                        BW.READ.removeProgress($reading.attr('id'));
                     } else {
-                        $parent.find('.ui-btn').attr('data-theme', 'c');
-                        console.log('!3');
+                        // show selected state
+                        $reading.attr('data-theme', selectedTheme);
+                        
+                        // track progress
+                        BW.READ.addProgress($reading.attr('id'));
                     }
+                    
+                    // mark as read if all siblings are checked
+                    
+                    var $checkedReadings = $container.find('li[data-theme="' + selectedTheme + '"]');
 
-                    // save state
+                    if ($checkedReadings.length === $readings.length) {
+                        $container.attr('data-theme', selectedTheme);
+                    } else {
+                        $container.attr('data-theme', unselectedTheme);
+                    }
+                    
+                    // refresh the appearance
+                    $container.find('ul').listview('refresh');
+                    
+                    // save progress to local storage
+                    BW.READ.save();
                 });
             }
-        }
+        },
         
-
+        addProgress: function(id) {
+            completedReadings.push(id);
+            completedReadings.sort();
+            completedReadings = _.uniq(completedReadings, true);
+        },
+        
+        removeProgress: function(id) {
+            completedReadings = _.without(completedReadings, id);
+        },
+        
+        save: function() {
+            if (!supportsLocalStorage()) { return false; }
+            
+            localStorage["bw.read.progress"] = completedReadings.join(',');
+            
+            return true;
+        }
     };
 
 // Alias jQuery, window, document.

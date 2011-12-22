@@ -1,5 +1,5 @@
 bw_mobile_homepage:
-    pattern:  /m
+    pattern:  /
     defaults: { _controller: BibleWormMobileBundle:Default:index }
 
 bw_get_reading_plan:
@@ -17,12 +17,6 @@ bw_get_reading_plan_set:
 bw_get_reading_plan_passage:
     pattern:  /{book}/{chapter}/{verse}
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage, _format: html, verse: ''}
-    requirements:
-        _method: GET
-
-bw_api_v1_get_reading_plan:
-    pattern:  /api/v1/reading-plan
-    defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: json }
     requirements:
         _method: GET
 

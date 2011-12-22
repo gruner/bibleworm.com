@@ -1,0 +1,9 @@
+BibleWormApiBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: BibleWormApiBundle:Default:index }
+
+bw_api_v1_get_reading_plan:
+    pattern:  /v1/reading-plans/{id}
+    defaults: { _controller: BibleWormApiBundle:Default:getReadingPlan, _format: json, id: 1 }
+    requirements:
+        _method: GET
