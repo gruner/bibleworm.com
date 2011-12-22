@@ -2,6 +2,18 @@ bw_mobile_homepage:
     pattern:  /
     defaults: { _controller: BibleWormMobileBundle:Default:index }
 
+bw_get_bible_index:
+    pattern:  /bible
+    defaults: { _controller: BibleWormMobileBundle:Bible:getIndex }
+    
+bw_get_bible_book:
+    pattern:  /bible/{book}
+    defaults: { _controller: BibleWormMobileBundle:Bible:getBook }
+    
+bw_get_bible_chapter:
+    pattern:  /bible/{book}/{chapter}
+    defaults: { _controller: BibleWormMobileBundle:Bible:getChapter }
+
 bw_get_reading_plan:
     pattern:  /reading-plan
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlan, _format: html }
@@ -13,7 +25,6 @@ bw_get_reading_plan_set:
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getReadingPlanDay, _format: html }
     requirements:
         _method: GET
-        
         
 bw_get_reading_plan_passage:
     pattern:  /read/{reference}

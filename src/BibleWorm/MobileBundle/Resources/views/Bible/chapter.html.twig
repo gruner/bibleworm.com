@@ -1,0 +1,22 @@
+{% extends 'BibleWormMobileBundle:ReadingPlan:index.html.twig' %}
+
+{% block header %}
+    <a href="{{ url('bw_get_bible_index') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Books</a>
+    <h1>{{ book }} {{ chapter }}</h1>
+    <!-- <a href="#" data-role="button" data-icon="gear" class="ui-btn-right">ESV</a> -->
+{% endblock %}
+
+{% block body %}
+    {{ passage|raw }}
+    <div data-role="navbar">
+        <ul>
+            {% if prev_chapter  %}
+            <li data-iconpos="left"><a href="{{ url('bw_get_bible_chapter', {'book': book, 'chapter': prev_chapter}) }}" data-icon="arrow-l" data-direction="reverse">Prev</a></li>
+            {% endif %}
+            
+            {% if next_chapter %}
+            <li data-iconpos="right"><a href="{{ url('bw_get_bible_chapter', {'book': book, 'chapter': next_chapter}) }}" data-icon="arrow-r">Next</a></li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}

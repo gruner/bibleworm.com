@@ -2,6 +2,11 @@
 
 namespace BibleWorm\ApiBundle\Bible;
 
+/**
+ * Defines meta data for books of the Bible
+ * Each book is an array with the name, OSIS ID, and
+ * a nested array of the verse count of each chapter in the book
+ */
 class BookIndex
 {
     protected static $canon = array(

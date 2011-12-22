@@ -1,0 +1,13 @@
+{% extends 'BibleWormMobileBundle:ReadingPlan:index.html.twig' %}
+
+{% block header %}
+    <h1>Bible</h1>
+{% endblock %}
+
+{% block body %}
+    <ul data-role="listview" data-theme="c">
+        {% for book in books %}
+            <li><a href="{{ url('bw_get_bible_book', {'book': book}) }}">{{ book }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -61,7 +61,7 @@ class Bible
     
     public function getBookNames()
     {
-        array_keys($this->getBooks());
+        return array_keys($this->getBooks());
     }
     
     

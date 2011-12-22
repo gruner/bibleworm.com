@@ -1,0 +1,14 @@
+{% extends 'BibleWormMobileBundle:ReadingPlan:index.html.twig' %}
+
+{% block header %}
+    <a href="{{ url('bw_get_bible_index') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Books</a>
+    <h1>{{ book }}</h1>
+{% endblock %}
+
+{% block body %}
+    <ul data-role="listview" data-theme="c">
+        {% for chapter in 1..chapter_count %}
+            <li><a href="{{ url('bw_get_bible_chapter', {'book': book, 'chapter': chapter}) }}">Chapter {{ chapter }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
