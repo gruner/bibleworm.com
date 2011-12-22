@@ -17,7 +17,12 @@ class ESV
         );
     }
     
-    public function setKey($key)
+    public function getName()
+    {
+        return 'ESV';
+    }
+    
+    public function setApiKey($key)
     {
         $this->key = $key;
     }
@@ -44,19 +49,17 @@ class ESV
     public function lookup($passage)
     {
         $data = fopen($this->getUrl($passage), "r") ;
+        $buffer = '';
 
-        if ($data)
-        {
-           while (!feof($data))
-           {
-              $buffer = fgets($data, 4096);
-              echo $buffer;
+        if ($data) {
+           while (!feof($data)) {
+              $buffer .= fgets($data, 4096);
            }
            fclose($data);
-        }
-        else
-        {
+        } else {
            die("fopen failed for url to webservice");
         }
+        
+        return $buffer;
     }
 }

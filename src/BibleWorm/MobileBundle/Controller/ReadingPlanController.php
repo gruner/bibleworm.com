@@ -29,19 +29,19 @@ class ReadingPlanController extends Controller
     //     ));
     // }
     
-    public function getPassageAction($book, $chapter, $verse)
+    public function getPassageAction($reference)
     {
-        $ref = $book.' '.$chapter;
-        
-        if (!empty($verse)) {
-            $ref .= ':'.$verse;
-        }
+        // $ref = $book.' '.$chapter;
+        // 
+        // if (!empty($verse)) {
+        //     $ref .= ':'.$verse;
+        // }
         
         $bible = $this->get('bw_api.bible');
-        $passage = $bible->getTranslation('ESV')->lookup($ref);
+        $passage = $bible->getTranslation('ESV')->lookup($reference);
         
         return $this->render('BibleWormMobileBundle:ReadingPlan:passage.html.twig', array(
-            'reference' => $ref,
+            'reference' => $reference,
             'passage' => $passage
         ));
     }

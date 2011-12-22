@@ -38,9 +38,9 @@
                 <h3>Day {{ day }}</h3>
                 <div data-role="fieldcontain">
                     <ul data-role="listview" data-theme="c" data-split-theme="c" data-inset="true" class="readings">
-                        <li class="reading_link" id="{{ day }}-1"><a href="#" class="reference">{{ readings.1 }}</a><a href="#">Read</a></li>
-                        <li class="reading_link" id="{{ day }}-2"><a href="#" class="reference">{{ readings.2 }}</a><a href="#">Read</a></li>
-                        <li class="reading_link" id="{{ day }}-3"><a href="#" class="reference">{{ readings.3 }}</a><a href="#">Read</a></li>
+                        <li class="reading_link" id="{{ day }}-1"><a href="#" class="reference">{{ readings.1 }}</a><a href="{{ url('bw_get_reading_plan_passage', {'reference': readings.1}) }}">Read</a></li>
+                        <li class="reading_link" id="{{ day }}-2"><a href="#" class="reference">{{ readings.2 }}</a><a href="{{ url('bw_get_reading_plan_passage', {'reference': readings.2}) }}">Read</a></li>
+                        <li class="reading_link" id="{{ day }}-3"><a href="#" class="reference">{{ readings.3 }}</a><a href="{{ url('bw_get_reading_plan_passage', {'reference': readings.3}) }}">Read</a></li>
                     </ul>
                 </div>
             </div>

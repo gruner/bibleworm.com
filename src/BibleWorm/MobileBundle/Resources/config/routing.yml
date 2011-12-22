@@ -14,11 +14,24 @@ bw_get_reading_plan_set:
     requirements:
         _method: GET
         
+        
 bw_get_reading_plan_passage:
-    pattern:  /{book}/{chapter}/{verse}
+    pattern:  /read/{reference}
     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage, _format: html, verse: ''}
     requirements:
         _method: GET
+        
+# bw_get_reading_plan_passage:
+#     pattern:  /{book}/{chapter}
+#     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage, _format: html, verse: ''}
+#     requirements:
+#         _method: GET
+#                 
+# bw_get_reading_plan_passage_full:
+#     pattern:  /{book}/{chapter}/{verse}
+#     defaults: { _controller: BibleWormMobileBundle:ReadingPlan:getPassage, _format: html}
+#     requirements:
+#         _method: GET
 
 bw_get_greek_flash_cards:
     pattern:  /greek-alphabet

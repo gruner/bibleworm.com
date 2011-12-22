@@ -2,12 +2,11 @@
 
 {% block header %}
     <a href="{{ url('bw_get_reading_plan') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Back to Plan</a>
-    {{ parent() }}
     <h1>{{ reference }}</h1>
     <a href="#" data-role="button" data-icon="gear" class="ui-btn-right">Options</a>
 {% endblock %}
 
 {% block body %}
-    {{ passage }}
+    {{ passage|raw }}
     <a href="{{ url('bw_get_reading_plan') }}" data-role="button" data-icon="arrow-l">Mark as Read</a>
 {% endblock %}
