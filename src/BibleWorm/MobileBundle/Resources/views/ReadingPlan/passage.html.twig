@@ -8,5 +8,5 @@
 
 {% block body %}
     {{ passage|raw }}
-    <a href="{{ url('bw_get_reading_plan') }}" data-role="button" data-icon="arrow-l">Mark as Read</a>
+    <a href="{{ url('bw_get_reading_plan') }}" data-role="button" data-icon="arrow-l" data-direction="reverse">Mark as Read</a>
 {% endblock %}
