@@ -1,7 +1,3 @@
-BibleWormSiteBundle:
-    resource: "@BibleWormSiteBundle/Resources/config/routing.yml"
-    prefix:   /
-
 BibleWormApiBundle:
     resource: "@BibleWormApiBundle/Resources/config/routing.yml"
     prefix:   /api
@@ -9,6 +5,11 @@ BibleWormApiBundle:
 BibleWormMobileBundle:
     resource: "@BibleWormMobileBundle/Resources/config/routing.yml"
     prefix:   /m
+
+# has to go last because it includes a catch-all route
+BibleWormSiteBundle:
+    resource: "@BibleWormSiteBundle/Resources/config/routing.yml"
+    prefix:   /
 
 # Internal routing configuration to handle ESI
 #_internal:

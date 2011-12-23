@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %} - BibleWorm</title>
+    <meta name="author" content="Andrew Gruner">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="canonical" href="http://bibleworm.com">
+    <!-- <link href="/favicon.png" rel="icon"> -->
+    <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="/js/modernizr-2.0.js"></script>
+    <script src="/js/ender.js"></script>
+    <script src="/js/octopress.js" type="text/javascript"></script>
+    <!-- <link href="/atom.xml" rel="alternate" title="BibleWorm" type="application/atom+xml"> -->
+    <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1148307-6']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+    <header role="banner">
+        <hgroup>
+            <h1><a href="/">BibleWorm</a></h1>
+            <h2>Tools for Bible Study</h2>
+        </hgroup>
+    </header>
+    <nav role="navigation">
+        <form action="http://google.com/search" method="get">
+            <fieldset role="search">
+                <input type="hidden" name="q" value="site:bibleworm.com" />
+                <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+            </fieldset>
+        </form>
+        <ul role=main-navigation>
+            <li><a href="{{ url('bw_site_home') }}">Tools</a></li>
+            <li><a href="{{ url('bw_mobile_homepage') }}">Mobile</a></li>
+            <li><a href="{{ url('bw_site_page', {'slug': 'about'}) }}">About</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div id="content">
+            <div class="blog-index">
+                <article>
+                    <header>
+                        <h1 class="entry-title"><a href="#">{{ title }}</a></h1>
+                        <p class="meta">
+                            <time datetime="#" pubdate data-updated="true">Time</time>
+                        </p>
+                    </header>
+                    <div class="entry-content">
+                        {% block body %}{% endblock %}
+                    </div>
+                </article>
+            </div>
+            <aside class="sidebar">
+                <section>
+                    <h1>Latest Tweets</h1>
+                    <ul id="tweets">
+                        <li class="loading">Status updating&#8230;</li>
+                    </ul>
+                    <script type="text/javascript">
+                        $.domReady(function(){
+                            getTwitterFeed("gruner", 4, false);
+                        });
+                    </script>
+                    <script src="/js/twitter.js" type="text/javascript"> </script>
+  
+                    <a href="http://twitter.com/gruner" class="twitter-follow-button" data-show-count="false">Follow @gruner</a>
+                </section>
+            </aside>
+        </div>
+    </div>
+    <footer role="contentinfo">
+        <p>Copyright &copy; 2012 - Andrew Gruner -
+        <span class="credit">Layout by <a href="http://octopress.org">Octopress</a></span>
+        </p>
+    </footer>
+
+    <script type="text/javascript">
+        (function(){
+            var twitterWidgets = document.createElement('script');
+            twitterWidgets.type = 'text/javascript';
+            twitterWidgets.async = true;
+            twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+            document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+        })();
+    </script>
+</body>
+</html>

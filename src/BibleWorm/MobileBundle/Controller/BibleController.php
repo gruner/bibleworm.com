@@ -22,7 +22,7 @@ class BibleController extends Controller
         $books = $bible->getBooks();
         
         if (!array_key_exists($book, $books)) {
-            # 404
+            throw $this->createNotFoundException(sprintf('Book "%s" not found', $book));
         }
         
         return $this->render('BibleWormMobileBundle:Bible:book.html.twig', array(

@@ -3,16 +3,16 @@
 {% block title %}Mobile Bible Study Tools{% endblock %}
 
 {% block header %}
-<h1>Bible Study Tools</h1>
+    <h1>Bible Study Tools</h1>
 {% endblock %}
 
 {% block body %}
     <h2>BibleWorm</h2>
-    <h3>Tools for Bible study</h3>
-    <p>&nbsp;</p>
-    <ul data-role="listview" data-theme="c">
+    <h3>Tools for Bible Study</h3>
+    <ul data-role="listview" data-inset="true" data-theme="c">
         <li><a href="{{ url('bw_get_bible_index') }}">Bible</a></li>
-        <li><a href="{{ url('bw_get_reading_plan') }}">Bible Reading Plan</a></li>
+        <li><a href="{{ url('bw_get_reading_plan') }}" data-ajax="false">Bible Reading Plan</a></li>
         <li><a href="{{ url('bw_get_greek_flash_cards') }}">Greek Alphabet Flash Cards</a></li>
     </ul>
+    <a href="{{ url('bw_site_home') }}" data-role="button" data-icon="arrow-l" data-direction="reverse" data-ajax="false">Standard Site</a>
 {% endblock %}

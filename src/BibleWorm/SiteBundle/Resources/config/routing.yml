@@ -1,3 +1,11 @@
-BibleWormSiteBundle_homepage:
+bw_site_home:
     pattern:  /
     defaults: { _controller: BibleWormSiteBundle:Default:index }
+    requirements:
+        _method: GET
+
+bw_site_page:
+    pattern:  /{slug}
+    defaults: { _controller: BibleWormSiteBundle:Default:getPage }
+    requirements:
+        _method: GET
