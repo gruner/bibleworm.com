@@ -1,0 +1,7 @@
+parameters:
+#    bible_worm_site.example.class: BibleWorm\SiteBundle\Example
+
+services:
+#    bible_worm_site.example:
+#        class: %bible_worm_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,3 @@
+BibleWormSiteBundle_homepage:
+    pattern:  /
+    defaults: { _controller: BibleWormSiteBundle:Default:index }
