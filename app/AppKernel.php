@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new BibleWorm\MobileBundle\BibleWormMobileBundle(),
             new BibleWorm\ApiBundle\BibleWormApiBundle(),
             new BibleWorm\SiteBundle\BibleWormSiteBundle(),
+            new BibleWorm\PrayerBundle\BibleWormPrayerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

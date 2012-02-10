@@ -1,3 +1,8 @@
+BibleWormPrayerBundle:
+    resource: "@BibleWormPrayerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 BibleWormApiBundle:
     resource: "@BibleWormApiBundle/Resources/config/routing.yml"
     prefix:   /api
