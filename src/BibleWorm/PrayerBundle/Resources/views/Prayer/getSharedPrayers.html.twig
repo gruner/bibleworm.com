@@ -1,0 +1,14 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %} - Shared Prayers{% endblock %}
+
+{% block body %}
+    <h2>Shared Prayers</h2>
+    <p>These are prayers that other users have elected to make public.</p>
+    {% for prayer in prayers %}
+        <h3>{{ prayer.name }}</h3>
+        {% if prayer.notes %}
+            <p>{{ prayer.notes }}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

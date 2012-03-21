@@ -1,0 +1,15 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %} - Prayers - New{% endblock %}
+
+{% block body %}
+    <h2>New Prayer</h2>
+    <form action="{{ path('post_prayers') }}" method="post">
+        {{ form_errors(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.notes) }}
+        {{ form_rest(form) }}
+        <input type="submit" value="Save" />
+        <input type="button" value="Cancel" />
+    </form>
+{% endblock %}

@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new BibleWorm\MobileBundle\BibleWormMobileBundle(),
             new BibleWorm\ApiBundle\BibleWormApiBundle(),
             new BibleWorm\SiteBundle\BibleWormSiteBundle(),

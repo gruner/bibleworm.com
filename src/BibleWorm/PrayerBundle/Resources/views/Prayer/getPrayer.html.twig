@@ -1,0 +1,26 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %} - {{ prayer.name }}{% endblock %}
+
+{% block body %}
+    <h2>{{ prayer.name }}</h2>
+    <p>{{ prayer.notes }}</p>
+    {% if prayer.isActive == false %}
+        {% if prayer.resolution %}
+            <h3>God's Answer</h3>
+            <p>{{ prayer.resolution }}</p>
+        {% else %}
+            <p>How did God answer this prayer?</p>
+            <div id="form_prayer_resolution"><!--js will insert resolution field here--></div>
+        {% endif %}
+    {% endif %}
+    
+    <form id="edit_prayer" action="{{ path('post_prayers') }}" method="post">
+        {{ form_errors(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.notes) }}
+        {{ form_row(form.resolution) }}
+        {{ form_rest(form) }}
+        <input type="submit" value="Save" />
+    </form>
+{% endblock %}

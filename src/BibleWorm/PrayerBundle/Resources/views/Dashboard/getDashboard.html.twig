@@ -1,0 +1,38 @@
+{% extends '::twoColumn.html.twig' %}
+
+{% block main %}
+    <h2>Prayers</h2>
+    <a href="{{ path('new_prayer') }}" class="btn btn-small btn-primary pull-right"><i class="icon-plus-sign icon-white"></i> Add a prayer</a>
+    {% for prayer in prayers %}
+        <div id="prayer_{{ prayer.id }}" class="prayer_container">
+            <h3><a href="{{ path('get_prayer', {'id': prayer.id}) }}">{{ prayer.name }}</a></h3>
+            <a href="{{ path('archive_prayer', {'id': prayer.id}) }}" class="btn btn-small btn-primary pull-right">Archive</a>
+            {% if prayer.notes %}
+                {{ prayer.notes }}
+            {% endif %}
+            <p>[tag icons]
+            • <span class="prayer_date">{{ prayer.createdAt|date('m/d') }}</span>
+            • <a href="#">Share</a>
+            • <a href="{{ path('delete_prayer', {'id': prayer.id}) }}">Delete</a>
+            </p>
+        </div>
+    {% else %}
+        <p>You haven't added any prayers yet. <a href="{{ path('new_prayer') }}">Add one here</a></p>.
+    {% endfor %}
+    
+    <div id="new_prayer_form" class="hide">
+        <form action="{{ path('post_prayers') }}" method="post">
+            {{ form_errors(form) }}
+            {{ form_row(form.name) }}
+            {{ form_row(form.notes) }}
+            {{ form_rest(form) }}
+            <input type="submit" value="Save" />
+            <input type="button" value="Cancel" />
+        </form>
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    <h3>Tags</h3>
+    <p>[rearranges the main list as prayers are added?]</p>
+{% endblock %}

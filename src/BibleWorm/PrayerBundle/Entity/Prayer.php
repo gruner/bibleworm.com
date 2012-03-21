@@ -3,37 +3,42 @@
 namespace BibleWorm\PrayerBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use BibleWorm\ApiBundle\Entity\User;
+use BibleWorm\PrayerBundle\Entity\Subject;
 
 /**
  * BibleWorm\PrayerBundle\Entity\Prayer
  *
- * @ORM\Table()
+ * @ORM\Table(name="bw_prayer")
  * @ORM\Entity
  */
 class Prayer
 {
     /**
-     * @var integer $id
-     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="\BibleWormApiBundle:User", inversedBy="prayers")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
 
     /**
-     * @var integer $user_id
-     *
-     * @ORM\Column(name="user_id", type="integer")
+     * @XORM\ManyToOne(targetEntity="Subject", inversedBy="prayers")
+     * @XORM\JoinColumn(name="subject_id", referencedColumnName="id")
      */
-    private $user_id;
-
+    //private $subject;
+    
     /**
-     * @var integer $subject_id
-     *
-     * @ORM\Column(name="subject_id", type="integer")
+     * @ORM\ManyToMany(targetEntity="Tag", mappedBy="prayers")
+     * @ORM\JoinTable(name="bw_tag_prayer")
      */
-    private $subject_id;
+    private $tags;
 
     /**
      * @var string $name
@@ -43,235 +48,157 @@ class Prayer
     private $name;
 
     /**
-     * @var string $description
-     *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="notes", type="string", length=255)
      */
-    private $description;
+    private $notes;
 
     /**
-     * @var string $resolution
-     *
      * @ORM\Column(name="resolution", type="string", length=255)
      */
     private $resolution;
 
     /**
-     * @var boolean $is_public
-     *
      * @ORM\Column(name="is_public", type="boolean")
      */
-    private $is_public;
+    private $isPublic;
 
     /**
-     * @var boolean $is_active
-     *
      * @ORM\Column(name="is_active", type="boolean")
      */
-    private $is_active;
+    private $isActive;
 
     /**
-     * @var datetime $created_at
-     *
      * @ORM\Column(name="created_at", type="datetime")
      */
-    private $created_at;
+    private $createdAt;
 
     /**
-     * @var datetime $updated_at
-     *
      * @ORM\Column(name="updated_at", type="datetime")
      */
-    private $updated_at;
-
-
+    private $updatedAt;
+    
     /**
-     * Get id
-     *
-     * @return integer 
+     * Sets defaults when creating a new object
      */
+    public function __construct()
+    {
+        $this->isActive = true;
+        $this->isPublic = false;
+        $this->tags = new ArrayCollection();
+        $this->createdAt = $this->updatedAt = new \DateTime("now");
+    }
+
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * Set user_id
-     *
-     * @param integer $userId
-     */
-    public function setUserId($userId)
+    public function setUser(User $user)
     {
-        $this->user_id = $userId;
+        $this->user = $user;
     }
 
-    /**
-     * Get user_id
-     *
-     * @return integer 
-     */
-    public function getUserId()
+    public function getUser()
     {
-        return $this->user_id;
+        return $this->user;
     }
 
-    /**
-     * Set subject_id
-     *
-     * @param integer $subjectId
-     */
-    public function setSubjectId($subjectId)
+    public function setSubject($subject)
     {
-        $this->subject_id = $subjectId;
+        $this->subject = $subject;
     }
 
-    /**
-     * Get subject_id
-     *
-     * @return integer 
-     */
-    public function getSubjectId()
+    public function getSubject()
     {
-        return $this->subject_id;
+        return $this->subject;
     }
 
-    /**
-     * Set name
-     *
-     * @param string $name
-     */
     public function setName($name)
     {
         $this->name = $name;
     }
 
-    /**
-     * Get name
-     *
-     * @return string 
-     */
     public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * Set description
-     *
-     * @param string $description
-     */
-    public function setDescription($description)
+    public function setNotes($notes)
     {
-        $this->description = $description;
+        $this->notes = $notes;
     }
 
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
+    public function getNotes()
     {
-        return $this->description;
+        return $this->notes;
     }
 
-    /**
-     * Set resolution
-     *
-     * @param string $resolution
-     */
     public function setResolution($resolution)
     {
         $this->resolution = $resolution;
     }
 
-    /**
-     * Get resolution
-     *
-     * @return string 
-     */
     public function getResolution()
     {
         return $this->resolution;
     }
 
     /**
-     * Set is_public
-     *
      * @param boolean $isPublic
      */
     public function setIsPublic($isPublic)
     {
-        $this->is_public = $isPublic;
+        $this->isPublic = $isPublic;
     }
 
     /**
-     * Get is_public
-     *
      * @return boolean 
      */
     public function getIsPublic()
     {
-        return $this->is_public;
+        return $this->isPublic;
     }
 
     /**
-     * Set is_active
-     *
      * @param boolean $isActive
      */
     public function setIsActive($isActive)
     {
-        $this->is_active = $isActive;
+        $this->isActive = $isActive;
     }
 
     /**
-     * Get is_active
-     *
      * @return boolean 
      */
     public function getIsActive()
     {
-        return $this->is_active;
+        return $this->isActive;
     }
 
     /**
-     * Set created_at
-     *
-     * @param datetime $createdAt
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->created_at = $createdAt;
-    }
-
-    /**
-     * Get created_at
-     *
      * @return datetime 
      */
     public function getCreatedAt()
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
     /**
-     * Set updated_at
-     *
-     * @param datetime $updatedAt
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updated_at = $updatedAt;
-    }
-
-    /**
-     * Get updated_at
-     *
      * @return datetime 
      */
     public function getUpdatedAt()
     {
-        return $this->updated_at;
+        return $this->updatedAt;
+    }
+    
+    public function getTags()
+    {
+        return $this->tags;
+    }
+    
+    public function addTag(Tag $tag)
+    {
+        $tag->addPrayer($this); // synchronously updating inverse side
+        $this->tags[] = $tag;
     }
 }

@@ -3,32 +3,22 @@
 namespace BibleWorm\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Entity\User as BaseUser;
 
 /**
- * BibleWorm\ApiBundle\Entity\User
+ * NodePub\UserBundle\Entity\User
  *
- * @ORM\Table()
+ * @ORM\Table(name="bw_user")
  * @ORM\Entity
  */
-class User
+class User extends BaseUser
 {
     /**
      * @var integer $id
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+    protected $id;
 }
