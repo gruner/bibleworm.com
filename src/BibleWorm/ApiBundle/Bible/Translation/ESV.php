@@ -10,7 +10,7 @@ class ESV
     
     function __construct()
     {
-        $this->key = 'IP';
+        $this->key = 'IP'; // default to IP address used as API key
         $this->options = array(
             'include-passage-references' => 'false',
             'include-audio-link' => 'false'

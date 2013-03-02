@@ -6,12 +6,24 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>BibleWorm Prayers{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %} - BibleWorm</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Andrew Gruner">
     <link rel="shortcut icon" href="/images/favicon.png">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!--<script src="/js/modernizr-2.0.6.min.js"></script>-->
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1148307-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </head>
 <body">
     <div class="container">
@@ -19,16 +31,14 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <h1><a href="{{ path('get_dashboard') }}" class="brand">Prayers</a></h1>
-                        <ul class="nav">
-                            <li><a href="{{ path('get_shared_prayers') }}">Shared Prayers</a></li>
-                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                                <li><a href="{{ path('fos_user_profile_edit') }}">My Account</a></li> 
-                                <li><a href="{{ path('fos_user_security_logout') }}">Sign Out</a></li>
-                            {% else %}
-                                <li><a href="{{ path('fos_user_security_login') }}">Sign In</a></li>
-                            {% endif %}
-                        </ul>
+                        {% block hd %}
+                            <h1><a href="{{ path('bw_site_home') }}" class="brand">BibleWorm</a></h1>
+                            <ul class="nav" role=main-navigation>
+                                <li><a href="{{ url('bw_site_home') }}">Tools</a></li>
+                                <li><a href="{{ url('bw_mobile_homepage') }}">Mobile</a></li>
+                                <li><a href="{{ url('bw_site_page', {'slug': 'about'}) }}">About</a></li>
+                            </ul>
+                        {% endblock %}
                     </div>
                 </div>
             </div>

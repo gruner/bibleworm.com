@@ -9,7 +9,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('BibleWormSiteBundle:Page:home.html.twig', array('slug' => 'BibleWorm'));
+        return $this->redirect($this->generateUrl('bw_mobile_homepage'));
+        //return $this->render('BibleWormSiteBundle:Page:home.html.twig', array('slug' => 'BibleWorm'));
     }
     
     public function getPageAction($slug)
