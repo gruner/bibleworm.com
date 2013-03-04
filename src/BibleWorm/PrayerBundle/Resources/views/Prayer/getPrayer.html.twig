@@ -1,6 +1,6 @@
-{% extends '::layout.html.twig' %}
+{% extends 'PrayerBundle:Dashboard:layout.html.twig' %}
 
-{% block title %} - {{ prayer.name }}{% endblock %}
+{% block title %}{{ prayer.name }}{% endblock %}
 
 {% block body %}
     <h2>{{ prayer.name }}</h2>

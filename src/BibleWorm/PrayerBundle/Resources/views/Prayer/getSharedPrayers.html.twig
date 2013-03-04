@@ -1,8 +1,8 @@
-{% extends '::layout.html.twig' %}
+{% extends 'PrayerBundle:Dashboard:layout.html.twig' %}
 
-{% block title %} - Shared Prayers{% endblock %}
+{% block title %}Shared Prayers{% endblock %}
 
-{% block body %}
+{% block main %}
     <h2>Shared Prayers</h2>
     <p>These are prayers that other users have elected to make public.</p>
     {% for prayer in prayers %}

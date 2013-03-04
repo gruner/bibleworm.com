@@ -14,7 +14,7 @@ use BibleWorm\PrayerBundle\Form\Type\PrayerType;
 class DashboardController extends Controller
 {
     /**
-     * @Route("/", name="get_dashboard")
+     * @Route("/", name="get_prayer_dashboard")
      * @Template()
      */
     public function getDashboardAction()
